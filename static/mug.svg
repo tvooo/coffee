@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="254px" height="260px" viewBox="0 0 254 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Mug</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Mug" transform="translate(-124.000000, -256.000000)" stroke="#000000" stroke-width="4">
+            <g transform="translate(126.000000, 258.000000)">
+                <path d="M10.6369176,0.156842747 C5.1137501,0.156842747 0.636338166,4.63982703 0.636338166,10.1598899 L0.636338166,245.325856 C0.636338166,250.850386 5.11713069,255.328903 10.6369176,255.328903 L170.091936,255.328903 C175.615104,255.328903 180.092516,250.845919 180.092516,245.325856 L180.092516,10.1598899 C180.092516,4.63535951 175.611723,0.156842747 170.091936,0.156842747 L10.6369176,0.156842747 Z" id="Vessel" fill="#FFFFFF"></path>
+                <path d="M180.752408,173.667293 L215.305365,173.667293 C234.388436,173.667293 249.858321,158.19664 249.858321,139.105787 L249.858321,106.457817 C249.858321,87.3700242 234.388307,71.8963106 215.312065,71.8963106 L181.068108,71.8963106" id="Handle"></path>
+            </g>
+        </g>
+    </g>
+</svg>

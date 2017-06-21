@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="339px" height="222px" viewBox="0 0 339 222" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>V60</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="V60" transform="translate(-101.000000, -98.000000)" stroke="#000000" stroke-width="4">
+            <g transform="translate(100.000000, 100.000000)">
+                <path d="M4.28034039,9.03627416 C1.91637367,4.04567775 4.47365195,-5.599576e-14 10.0029514,-5.4948079e-14 L289.997049,-1.89533985e-15 C295.521526,-8.48572554e-16 298.083813,4.04528385 295.71966,9.03627416 L210,190 L271.995277,190 C273.65474,190 275,191.348644 275,193.00033 L275,196.99967 C275,198.656707 273.654932,200 271.996101,200 L28.0038993,200 C26.3448915,200 25,198.651356 25,196.99967 L25,193.00033 C25,191.343293 26.3426972,190 28.004723,190 L90,190 L4.28034039,9.03627416 Z" id="Body" stroke-linejoin="round"></path>
+                <polyline id="Bottom" points="75 200 75 218 225 218 225 200"></polyline>
+                <path d="M219.034941,175.491203 C219.034941,175.491203 341.743367,99.5205991 337.006876,70.715829 C332.270385,41.9110588 275.627942,58.150365 275.627942,58.150365" id="Handle" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

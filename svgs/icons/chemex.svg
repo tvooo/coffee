@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="82px" viewBox="0 0 54 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Chemex Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-43.000000, -18.000000)" id="Chemex-Icon" stroke="#000000" stroke-width="4">
+            <path d="M49.1883059,29.0746629 C46.8751684,24.062865 49.4811691,20 54.9980749,20 L85.0019251,20 C90.5237094,20 93.1230042,24.0668242 90.8116941,29.0746629 L80,52.5 L92.2130015,76.926003 C97.8943539,88.2887078 92.2005568,97.5 79.4919587,97.5 L60.5080413,97.5 C47.801051,97.5 42.107505,88.28499 47.7869985,76.926003 L60,52.5 L49.1883059,29.0746629 Z"></path>
+        </g>
+    </g>
+</svg>
