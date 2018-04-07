@@ -80,29 +80,13 @@ export default () => (
     <div style={{ background: "white", padding: "2rem 1rem 0 1rem" }}>
       <Layout>
         <Header />
-        <Menu active="basics" />
+        <Menu active="equipment" />
       </Layout>
     </div>
     <Layout>
-      {/* <H>Learn how to brew great coffee</H>
-      <H>Brew methods</H>
-      <H>Fika</H>
-      <H>Påtår</H> */}
-      {/* <p>
-        Brewing
-        Filter
-        Bloom
-        Drip
-        Coffee
-      </p> */}
-      {/* <img src="https://instagram.com/p/BRfl4efgcLR/media/?size=m" />
-      <img src="https://instagram.com/p/BO4akDwgpFw/media/?size=m" /> */}
+      <H>Equipment</H>
+      <p>Dripper, Grinder, Scale, Timer</p>
 
-      <p>Grind. Rinse. Bloom. Brew. Repeat.</p>
-      <H>Basics</H>
-      <p>Grind, Water, Temperature, ...</p>
-
-      <H>Recipes</H>
       <div className="cards">
         {Object.keys(recipes).map(recipe => (
           <RecipeCard key={recipe} recipe={recipes[recipe]} />

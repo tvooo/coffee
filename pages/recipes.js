@@ -10,22 +10,7 @@ import Chemex from "../svgs/chemex.svg";
 import V60 from "../svgs/v60.svg";
 
 import colors from "../design/colors.json";
-import recipes from "../data/recipes";
-
-const allColors = [
-  ...colors.teal,
-  ...colors.cyan,
-  ...colors.blue,
-  ...colors.violet
-];
-
-const Bar = () => (
-  <div>
-    {allColors.map(c => (
-      <div style={{ background: c, height: "10px", width: "10px" }} />
-    ))}
-  </div>
-);
+import recipes from "../data/recipes.json";
 
 const Icon = ({ Comp }) => (
   <div className="Icon">
@@ -50,23 +35,12 @@ const Icon = ({ Comp }) => (
 const ChemexIcon = Icon(Chemex);
 const V60Icon = Icon(V60);
 
-const RecipeCard = ({ recipe, children }) => (
-  <Card
-    href={`/gear?gear=${recipe.method.toLowerCase()}`}
-    className="RecipeCard"
-  >
+const RecipeCard = ({ recipe }) => (
+  <Card className="RecipeCard">
     <div>
-      <Icon Comp={recipe.Icon} />
+      <p>{recipe.source}</p>
       <h2>{recipe.method}</h2>
-      {recipe.recipe && (
-        <p className="Card__summary">{recipe.recipe.summary}</p>
-      )}
     </div>
-    <style jsx>{`
-      .Card__summary {
-        color: gray;
-      }
-    `}</style>
   </Card>
 );
 
@@ -80,39 +54,20 @@ export default () => (
     <div style={{ background: "white", padding: "2rem 1rem 0 1rem" }}>
       <Layout>
         <Header />
-        <Menu active="basics" />
+        <Menu active="recipes" />
       </Layout>
     </div>
     <Layout>
-      {/* <H>Learn how to brew great coffee</H>
-      <H>Brew methods</H>
-      <H>Fika</H>
-      <H>Påtår</H> */}
-      {/* <p>
-        Brewing
-        Filter
-        Bloom
-        Drip
-        Coffee
-      </p> */}
-      {/* <img src="https://instagram.com/p/BRfl4efgcLR/media/?size=m" />
-      <img src="https://instagram.com/p/BO4akDwgpFw/media/?size=m" /> */}
-
-      <p>Grind. Rinse. Bloom. Brew. Repeat.</p>
-      <H>Basics</H>
-      <p>Grind, Water, Temperature, ...</p>
-
-      <H>Recipes</H>
+      {/* <H>Recipes</H> */}
       <div className="cards">
-        {Object.keys(recipes).map(recipe => (
-          <RecipeCard key={recipe} recipe={recipes[recipe]} />
-        ))}
+        {recipes.map((recipe, i) => <RecipeCard key={i} recipe={recipe} />)}
       </div>
       <style jsx>{`
         .cards {
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-between;
+          // justify-content: space-between;
+
           align-items: stretch;
         }
 
