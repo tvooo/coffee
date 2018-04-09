@@ -97,29 +97,14 @@ export default () => (
       </p> */}
       {/* <img src="https://instagram.com/p/BRfl4efgcLR/media/?size=m" />
       <img src="https://instagram.com/p/BO4akDwgpFw/media/?size=m" /> */}
-
-      <p>Grind. Rinse. Bloom. Brew. Repeat.</p>
-      <H>Basics</H>
-      <p>Grind, Water, Temperature, ...</p>
-
-      <H>Recipes</H>
-      <div className="cards">
-        {Object.keys(recipes).map(recipe => (
-          <RecipeCard key={recipe} recipe={recipes[recipe]} />
-        ))}
-      </div>
-      <style jsx>{`
-        .cards {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          align-items: stretch;
-        }
-
-        img {
-          max-width: 100%;
-        }
-      `}</style>
+      {/* <p>Grind. Rinse. Bloom. Brew. Repeat.</p> */}
+      <H>Grind</H>
+      Different brew styles and preferences require different grind sizes.
+      <H>Water</H>
+      <H>Method</H>
+      <H>Ratio</H>
+      <p>0.07:1 coffee to water</p>
+      <H>Bloom</H>
     </Layout>
   </div>
 );

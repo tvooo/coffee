@@ -1,80 +1,30 @@
-import Head from "next/head";
+import Link from "next/link";
+import { Video, Link as LinkIcon, AlignLeft } from "react-feather";
 
-import Layout from "../components/Layout";
-import Card from "../components/Card";
-import H from "../components/H";
-import Menu from "../components/Menu";
-import Header from "../components/Header";
+import Page from "../components/Page";
+import CardGrid from "../components/CardGrid";
 
-import Chemex from "../svgs/chemex.svg";
-import V60 from "../svgs/v60.svg";
-
-import colors from "../design/colors.json";
 import recipes from "../data/recipes.json";
 
-const Icon = ({ Comp }) => (
-  <div className="Icon">
-    <Comp width="40px" height="auto" />
-    <style jsx>{`
-      :global(#Chemex) {
-        stroke-width: 4px;
-      }
-      :global(#Chemex) :global(#Handle) {
-        stroke: black !important;
-        fill: white !important;
-      }
-      .Icon {
-        display: inline-block;
-        height: 80px;
-        width: 40px;
-      }
-    `}</style>
-  </div>
-);
-
-const ChemexIcon = Icon(Chemex);
-const V60Icon = Icon(V60);
-
-const RecipeCard = ({ recipe }) => (
-  <Card className="RecipeCard">
-    <div>
-      <p>{recipe.source}</p>
-      <h2>{recipe.method}</h2>
-    </div>
-  </Card>
-);
+// TODO: define colors. cascara = lime green, water = blue, pulp = red-ish violet
 
 export default () => (
-  <div>
-    <Head>
-      <title>prototyping.☕️</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <div style={{ background: "white", padding: "2rem 1rem 0 1rem" }}>
-      <Layout>
-        <Header />
-        <Menu active="recipes" />
-      </Layout>
-    </div>
-    <Layout>
-      {/* <H>Recipes</H> */}
-      <div className="cards">
-        {recipes.map((recipe, i) => <RecipeCard key={i} recipe={recipe} />)}
-      </div>
-      <style jsx>{`
-        .cards {
-          display: flex;
-          flex-wrap: wrap;
-          // justify-content: space-between;
-
-          align-items: stretch;
-        }
-
-        img {
-          max-width: 100%;
-        }
-      `}</style>
-    </Layout>
-  </div>
+  <Page active="recipes" title="Recipes">
+    <CardGrid>
+      {recipes.map((recipe, i) => (
+        <Link href={`/recipedetail?recipe=${i}`}>
+          <CardGrid.Card>
+            <p>{recipe.source}</p>
+            <h2>{recipe.method}</h2>
+            <p>
+              {recipe.coffee} : {recipe.water}
+            </p>
+            {recipe.vimeo && <Video />}
+            {recipe.url && <LinkIcon />}
+            {recipe.text && <AlignLeft />}
+          </CardGrid.Card>
+        </Link>
+      ))}
+    </CardGrid>
+  </Page>
 );

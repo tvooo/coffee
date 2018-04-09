@@ -11,10 +11,14 @@
   "author": "Tim von Oldenburg <tim@tvooo.de>",
   "license": "MIT",
   "dependencies": {
-    "feather-icons": "^4.5.0",
     "next": "^5.1.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
+    "react-feather": "^1.1.0",
+    "react-video": "^1.5.3",
+    "react-vimeo": "^2.0.0",
+    "remark": "^9.0.0",
+    "remark-react": "^4.0.1",
     "styled-components": "^3.2.5"
   },
   "devDependencies": {

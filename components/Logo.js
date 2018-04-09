@@ -1,10 +1,10 @@
-import typography from '../design/type.json';
-import colors from '../design/colors.json';
-import LogoSvg from '../svgs/logo.svg';
-import Link from 'next/link';
+import typography from "../design/type.json";
+import colors from "../design/colors.json";
+import LogoSvg from "../svgs/logo.svg";
+import Link from "next/link";
 
 export default () => (
-  <div className='Logo'>
+  <div className="Logo">
     <Link href="/">
       <div className="Link">
         <LogoSvg /> <h2>prototyping.coffee</h2>
@@ -12,12 +12,12 @@ export default () => (
     </Link>
     <style jsx>{`
       .Logo {
-
       }
 
       h2 {
         font-size: ${typography.sizes[1]};
         color: black;
+        border-bottom: 3px solid transparent;
       }
 
       .Link {
@@ -28,9 +28,8 @@ export default () => (
       }
 
       .Link:hover h2 {
-        text-decoration: underline;
-
+        border-color: black;
       }
     `}</style>
   </div>
-)
+);
