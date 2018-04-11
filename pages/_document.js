@@ -15,7 +15,12 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>prototyping.coffee</title>
+          <title>prototyping.☕️</title>
+          <meta charSet="utf-8" />
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
           {this.props.styleTags}
         </Head>
         <body>

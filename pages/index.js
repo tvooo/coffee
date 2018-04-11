@@ -1,10 +1,9 @@
 import Head from "next/head";
 
-import Layout from "../components/Layout";
 import Card from "../components/Card";
 import H from "../components/H";
-import Menu from "../components/Menu";
-import Header from "../components/Header";
+
+import Page from "../components/Page";
 
 import Chemex from "../svgs/chemex.svg";
 import V60 from "../svgs/v60.svg";
@@ -71,40 +70,27 @@ const RecipeCard = ({ recipe, children }) => (
 );
 
 export default () => (
-  <div>
-    <Head>
-      <title>prototyping.☕️</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <div style={{ background: "white", padding: "2rem 1rem 0 1rem" }}>
-      <Layout>
-        <Header />
-        <Menu active="basics" />
-      </Layout>
-    </div>
-    <Layout>
-      {/* <H>Learn how to brew great coffee</H>
+  <Page active="basics" title="Coffee Basics">
+    {/* <H>Learn how to brew great coffee</H>
       <H>Brew methods</H>
       <H>Fika</H>
       <H>Påtår</H> */}
-      {/* <p>
+    {/* <p>
         Brewing
         Filter
         Bloom
         Drip
         Coffee
       </p> */}
-      {/* <img src="https://instagram.com/p/BRfl4efgcLR/media/?size=m" />
+    {/* <img src="https://instagram.com/p/BRfl4efgcLR/media/?size=m" />
       <img src="https://instagram.com/p/BO4akDwgpFw/media/?size=m" /> */}
-      {/* <p>Grind. Rinse. Bloom. Brew. Repeat.</p> */}
-      <H>Grind</H>
-      Different brew styles and preferences require different grind sizes.
-      <H>Water</H>
-      <H>Method</H>
-      <H>Ratio</H>
-      <p>0.07:1 coffee to water</p>
-      <H>Bloom</H>
-    </Layout>
-  </div>
+    {/* <p>Grind. Rinse. Bloom. Brew. Repeat.</p> */}
+    <H>Grind</H>
+    Different brew styles and preferences require different grind sizes.
+    <H>Water</H>
+    <H>Method</H>
+    <H>Ratio</H>
+    <p>0.07:1 coffee to water</p>
+    <H>Bloom</H>
+  </Page>
 );

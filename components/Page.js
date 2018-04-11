@@ -14,9 +14,9 @@ export default ({ active, title, children }) => (
     <div style={{ background: "white", padding: "2rem 1rem 0 1rem" }}>
       <Layout>
         <Header />
-        <Menu active={active} />
       </Layout>
     </div>
+    <Menu active={active} />
     <Layout>{children}</Layout>
   </div>
 );

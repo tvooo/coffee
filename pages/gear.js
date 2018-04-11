@@ -5,7 +5,6 @@ import { ArrowLeft } from "react-feather";
 import H from "../components/H";
 import Page from "../components/Page";
 import Button from "../components/Button";
-import Header from "../components/Header";
 import Menu from "../components/Menu";
 
 import TextLink from "../components/Link";
@@ -30,7 +29,6 @@ export default props => {
 
       <div style={{ display: "flex", margin: "0 auto", maxWidth: "1200px" }}>
         <div style={{ marginRight: "2rem" }}>
-          {/* <Filter /><br/> */}
           <gear.Image />
         </div>
         <div>

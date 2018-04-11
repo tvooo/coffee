@@ -4,20 +4,20 @@ import colors from "../design/colors.json";
 const defaultBg = colors.gray[2];
 const activeBg = colors.gray[0];
 
-const Tabs = styled.div`
+const MenuList = styled.div`
   display: flex;
+  flex-direction: column;
   margin-bottom: 2rem;
-  background: white;
-  justify-content: center;
 `;
 
-const TabsItem = styled.div`
+const MenuListItem = styled.div`
   background: ${p => (p.active ? activeBg : defaultBg)};
-  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
   border-color: ${p => (p.color ? p.color : "transparent")};
-  padding: calc(1.5em - 5px) 2em 1.5em 2em;
+
+  padding: 1.5em 2em;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
 
   &:hover {
@@ -25,6 +25,6 @@ const TabsItem = styled.div`
   }
 `;
 
-Tabs.Item = TabsItem;
+MenuList.Item = MenuListItem;
 
-export default Tabs;
+export default MenuList;

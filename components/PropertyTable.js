@@ -17,7 +17,11 @@ const Row = ({ label, children }) => (
   </tr>
 );
 
-const PropertyTable = styled.table``;
+const PropertyTable = props => (
+  <table>
+    <tbody {...props} />
+  </table>
+);
 PropertyTable.Row = Row;
 
 export default PropertyTable;
