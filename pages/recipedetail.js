@@ -19,6 +19,7 @@ import remark from "remark";
 import reactRenderer from "remark-react";
 import ReactPlayer from "react-player";
 import { ArrowLeft } from "react-feather";
+import { getMethodName } from "../utils/methods.js";
 
 import Filter from "../svgs/chemex-filter.svg";
 
@@ -55,20 +56,25 @@ const ResponsiveVideoPlayer = styled(ReactPlayer).attrs({
   left: 0;
 `;
 
+const ButtonLink = Button.withComponent("a");
+
 export default props => {
   const recipe = recipes[props.url.query.recipe];
 
   return (
     <Page active="recipes" title={recipe.method}>
+      <H style={{ textAlign: "left" }}>
+        {recipe.source} &mdash; {getMethodName(recipe.method)}
+      </H>
       <Link href="/recipes">
-        <TextLink>
+        <ButtonLink>
           <ArrowLeft /> Back to recipes
-        </TextLink>
+        </ButtonLink>
       </Link>
       <div
         style={{ display: "flex", marginTop: "2rem", alignItems: "flex-start" }}
       >
-        <PropertyTable style={{ flex: "1 0 25%", minWidth: "200px" }}>
+        <PropertyTable style={{ flex: "1 0 35%", minWidth: "300px" }}>
           <PropertyTable.Row label="By">
             {recipe.source}
             <br />({recipe.origin})
@@ -90,19 +96,15 @@ export default props => {
               />
             </AspectRatioBox>
           </div>
-          // <iframe
-          //   src={`https://player.vimeo.com/video/${recipe.vimeo}?color=ffffff`}
-          //   width="800"
-          //   height="450"
-          //   frameborder="0"
-          //   webkitallowfullscreen
-          //   mozallowfullscreen
-          //   allowfullscreen
-          //   style={{ width: "100%" }}
-          // />
         )}
         {recipe.text && (
-          <Paper style={{ flex: "1 1 auto", marginLeft: "2rem" }}>
+          <Paper
+            style={{
+              flex: "1 1 auto",
+              marginLeft: "2rem",
+              borderRadius: "0.2rem"
+            }}
+          >
             <H>Instructions</H>
             <Markdown>{recipe.text}</Markdown>
           </Paper>

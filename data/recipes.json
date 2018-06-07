@@ -1,7 +1,7 @@
 [
   {
     "source": "Artisan Roast",
-    "method": "Chemex",
+    "method": "chemex",
     "origin": "Glasgow, Scotland",
     "coffee": "30g",
     "water": "500g",
@@ -10,7 +10,7 @@
   },
   {
     "source": "Artisan Roast",
-    "method": "Aeropress",
+    "method": "aeropress",
     "origin": "Edinburgh, Scotland",
     "coffee": "18g",
     "water": "250g",
@@ -20,7 +20,7 @@
   {
     "source": "BrewLab",
     "origin": "Edinburgh, Scotland",
-    "method": "Kalita Wave",
+    "method": "kalita",
     "coffee": "22g",
     "water": "300ml",
     "text": "naja"
@@ -28,7 +28,7 @@
   {
     "source": "La Cabra",
     "origin": "Aarhus, Denmark",
-    "method": "Aeropress",
+    "method": "aeropress",
     "coffee": "16g",
     "water": "200ml",
     "url": "https://www.lacabra.dk/collections/brew/products/aeropress",
@@ -38,7 +38,7 @@
   {
     "source": "La Cabra",
     "origin": "Aarhus, Denmark",
-    "method": "Hario V60",
+    "method": "v60",
     "coffee": "16g",
     "water": "260ml",
     "url": "https://www.lacabra.dk/collections/brew/products/aeropress",
@@ -48,7 +48,7 @@
   {
     "source": "Kurasu",
     "origin": "Kyoto, Japan",
-    "method": "Cold Brew (MIZUDASHI)",
+    "method": "coldbrew",
     "coffee": "45g",
     "water": "750ml",
     "url": "https://www.kurasu.kyoto/products/hario-filter-in-cold-brew",
@@ -56,8 +56,17 @@
   },
   {
     "source": "Tetsu Kasuya",
-    "method": "V60",
+    "method": "v60",
     "youtube": "wmCW8xSWGZY",
     "url": "https://www.youtube.com/watch?v=wmCW8xSWGZY"
+  },
+  {
+    "source": "Kurasu",
+    "origin": "Kyoto, Japan",
+    "method": "v60",
+    "coffee": "12g",
+    "water": "200ml",
+    "url":
+      "https://www.kurasu.kyoto/blogs/kurasu-journal/hario-v60-brewing-guide"
   }
 ]

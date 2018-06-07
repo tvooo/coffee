@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Card from "../components/Card";
+import CardGrid from "../components/CardGrid";
 import H from "../components/H";
 
 import Page from "../components/Page";
@@ -9,7 +9,8 @@ import Chemex from "../svgs/chemex.svg";
 import V60 from "../svgs/v60.svg";
 
 import colors from "../design/colors.json";
-import recipes from "../data/recipes";
+
+import recipes from "../pages/recipes";
 
 const allColors = [
   ...colors.teal,
@@ -49,27 +50,29 @@ const Icon = ({ Comp }) => (
 const ChemexIcon = Icon(Chemex);
 const V60Icon = Icon(V60);
 
-const RecipeCard = ({ recipe, children }) => (
-  <Card
-    href={`/gear?gear=${recipe.method.toLowerCase()}`}
-    className="RecipeCard"
-  >
-    <div>
-      <Icon Comp={recipe.Icon} />
-      <h2>{recipe.method}</h2>
-      {recipe.recipe && (
-        <p className="Card__summary">{recipe.recipe.summary}</p>
-      )}
-    </div>
-    <style jsx>{`
-      .Card__summary {
-        color: gray;
-      }
-    `}</style>
-  </Card>
-);
+// const RecipeCard = ({ recipe, children }) => (
+//   <Card
+//     href={`/gear?gear=${recipe.method.toLowerCase()}`}
+//     className="RecipeCard"
+//   >
+//     <div>
+//       <Icon Comp={recipe.Icon} />
+//       <h2>{recipe.method}</h2>
+//       {recipe.recipe && (
+//         <p className="Card__summary">{recipe.recipe.summary}</p>
+//       )}
+//     </div>
+//     <style jsx>{`
+//       .Card__summary {
+//         color: gray;
+//       }
+//     `}</style>
+//   </Card>
+// );
 
-export default () => (
+export default recipes;
+
+export const index = () => (
   <Page active="basics" title="Coffee Basics">
     {/* <H>Learn how to brew great coffee</H>
       <H>Brew methods</H>
