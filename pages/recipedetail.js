@@ -97,6 +97,15 @@ export default props => {
             </AspectRatioBox>
           </div>
         )}
+        {recipe.youtube && (
+          <div style={{ flex: "1 0 auto", marginLeft: "2rem" }}>
+            <AspectRatioBox>
+              <ResponsiveVideoPlayer
+                url={`https://www.youtube.com/watch?v=${recipe.youtube}`}
+              />
+            </AspectRatioBox>
+          </div>
+        )}
         {recipe.text && (
           <Paper
             style={{
