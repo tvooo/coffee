@@ -22,6 +22,7 @@ export default ({ active, title, children, showTeaser = false }) => (
       <title>{title} | prototyping.☕️</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <base href="/" />
     </Head>
     <div
       style={{

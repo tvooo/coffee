@@ -6,6 +6,16 @@ const methodDisplayNames = {
   aeropress: "Aeropress"
 };
 
-const getMethodName = k => methodDisplayNames[k];
+const methodPreviewImages = {
+  coldbrew: "ujenujDrMjc",
+  v60: "Lvon9Yylb3I",
+  kalita: "1fYkhZxh318",
+  chemex: "BKfsCuFQ5R8",
+  aeropress: "TD4DBagg2wE"
+};
 
-export { getMethodName };
+const getMethodName = k => methodDisplayNames[k];
+const getMethodPreviewImage = k =>
+  `//source.unsplash.com/${methodPreviewImages[k]}/1600x900`;
+
+export { getMethodName, getMethodPreviewImage };

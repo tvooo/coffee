@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { withRouter } from "next/router";
 import styled from "styled-components";
 import TextLink from "../components/Link";
 
@@ -58,8 +59,8 @@ const ResponsiveVideoPlayer = styled(ReactPlayer).attrs({
 
 const ButtonLink = Button.withComponent("a");
 
-export default props => {
-  const recipe = recipes[props.url.query.recipe];
+export default withRouter(props => {
+  const recipe = recipes[props.router.query.recipe];
 
   return (
     <Page active="recipes" title={recipe.method}>
@@ -121,4 +122,4 @@ export default props => {
       </div>
     </Page>
   );
-};
+});
