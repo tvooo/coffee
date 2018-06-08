@@ -71,5 +71,16 @@
     "water": "200ml",
     "url":
       "https://www.kurasu.kyoto/blogs/kurasu-journal/hario-v60-brewing-guide"
+  },
+  {
+    "source": "Chad Wang",
+    "origin": "Taiwan",
+    "method": "v60",
+    "coffee": "15g",
+    "water": "250g",
+    "temperature": "92",
+    "url":
+      "https://sprudge.com/6-recipes-from-the-2017-world-brewers-cup-123165.html",
+    "text": "30 second bloom. After bloom, pour rest of water directly in center of brewer. No circles. 2:00min total brew time."
   }
 ]
