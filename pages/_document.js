@@ -21,6 +21,10 @@ export default class MyDocument extends Document {
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
+          <meta
+            name="description"
+            content="A collection of coffee brewing recipes from all over the world"
+          />
           {this.props.styleTags}
         </Head>
         <body>

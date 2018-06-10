@@ -16,6 +16,6 @@ const methodPreviewImages = {
 
 const getMethodName = k => methodDisplayNames[k];
 const getMethodPreviewImage = k =>
-  `//source.unsplash.com/${methodPreviewImages[k]}/1600x900`;
+  `//source.unsplash.com/${methodPreviewImages[k]}/300x160`;
 
 export { getMethodName, getMethodPreviewImage };
