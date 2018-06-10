@@ -1,15 +1,13 @@
 import Head from "next/head";
+import styled, { injectGlobal } from "styled-components";
 
 import CardGrid from "../components/CardGrid";
 import H from "../components/H";
-
 import Page from "../components/Page";
 
 import Chemex from "../svgs/chemex.svg";
 import V60 from "../svgs/v60.svg";
-
 import colors from "../design/colors.json";
-
 import recipes from "../pages/recipes";
 
 const allColors = [
@@ -27,48 +25,31 @@ const Bar = () => (
   </div>
 );
 
-const Icon = ({ Comp }) => (
-  <div className="Icon">
+const IconContainer = styled.div`
+  display: inline-block;
+  height: 80px;
+  width: 40px;
+`;
+
+injectGlobal`
+  #Chemex {
+    stroke-width: 4px;
+  }
+
+  #Chemex #Handle {
+    stroke: black !important;
+    fill: white !important;
+  }
+`;
+
+const Icon = ({ Comp = "div" }) => (
+  <IconContainer>
     <Comp width="40px" height="auto" />
-    <style jsx>{`
-      :global(#Chemex) {
-        stroke-width: 4px;
-      }
-      :global(#Chemex) :global(#Handle) {
-        stroke: black !important;
-        fill: white !important;
-      }
-      .Icon {
-        display: inline-block;
-        height: 80px;
-        width: 40px;
-      }
-    `}</style>
-  </div>
+  </IconContainer>
 );
 
 const ChemexIcon = Icon(Chemex);
 const V60Icon = Icon(V60);
-
-// const RecipeCard = ({ recipe, children }) => (
-//   <Card
-//     href={`/gear?gear=${recipe.method.toLowerCase()}`}
-//     className="RecipeCard"
-//   >
-//     <div>
-//       <Icon Comp={recipe.Icon} />
-//       <h2>{recipe.method}</h2>
-//       {recipe.recipe && (
-//         <p className="Card__summary">{recipe.recipe.summary}</p>
-//       )}
-//     </div>
-//     <style jsx>{`
-//       .Card__summary {
-//         color: gray;
-//       }
-//     `}</style>
-//   </Card>
-// );
 
 export default recipes;
 
