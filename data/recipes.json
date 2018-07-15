@@ -94,5 +94,16 @@
     "time": "2:30",
     "text":
       "1. Setup: Put your V60 on your pitcher. Give the paper a rinse with hot water. It removes all paper taste from the filter and preheats the pitcher. Remove all rinsing water.\n2. Grind: Grind your coffee beans to a medium grind setting. Add the coffee to the drip and tare your scale. Have your boiling water ready.\n3. Bloom: Start timer. Pour 30g of hot water to wet all coffee. Let it bloom for 30 seconds.\n4. Pour steps: At 30 secs: Pour in 70g water. Keep adding water in pulses. Don't let the waterbed dry and don't to too high. We recommend steps of 30-50g pours. Pour in circular motions and never onto the sides - stick with the inner ring of a bagel. Done!"
-  }
+  },
+  {
+    "source": "Blackbird Coffee",
+    "origin": "Germany",
+    "method": "coldbrew",
+    "coffee": "80g",
+    "water": "700g",
+    "url":
+      "https://www.blackbirdcoffee.de/infos/tipps-und-infos/cold-brew-hario-bottle-in-flasche/",
+    "text":
+      "1. Grind your coffee slightly coarser than for a French Press brew.\n2. Put the coffee into the filter.\n3. Fill in cold water into to bottle.\n4. Put into fridge for about 8 hours.\n5. Try your cold brew neat or on ice."
+}
 ]
