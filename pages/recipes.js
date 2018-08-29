@@ -1,23 +1,45 @@
-import Link from "next/link";
+// import Link from "next/link";
 import { Video, Link as LinkIcon, AlignLeft } from "react-feather";
 import slug from "slug";
+import styled from "styled-components";
 import Page from "../components/Page";
 
 import CardGrid from "../components/CardGrid";
 
-import recipes from "../data/recipes.json";
+import recipes from "../data/recipes";
 import { getMethodName, getMethodPreviewImage } from "../utils/methods.js";
-// TODO: define colors. cascara = lime green, water = blue, pulp = red-ish violet
+
+const Link = styled.a`
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  flex-basis: 300px;
+  min-width: 0;
+  flex-grow: 0;
+  flex-shrink: 1;
+  margin: 1.5rem;
+`;
+
+const Heading = styled.h2`
+  margin: 0 0 1em 0;
+`;
+
+{
+  /* <Link
+  href={`/recipedetail?recipe=${i}`}
+  as={`/r/${slug(`${recipe.method}-${recipe.source}-${i}`, {
+    lower: true
+  })}`}
+  key={slug(`${recipe.method}-${recipe.source}-${i}`)}
+> */
+}
 
 export default () => (
   <Page active="recipes" title="Recipes" showTeaser>
     <CardGrid>
       {recipes.map((recipe, i) => (
         <Link
-          href={`/recipedetail?recipe=${i}`}
-          as={`/r/${slug(`${recipe.method}-${recipe.source}-${i}`, {
-            lower: true
-          })}`}
+          href={recipe.url}
           key={slug(`${recipe.method}-${recipe.source}-${i}`)}
         >
           <CardGrid.Card>
@@ -25,15 +47,29 @@ export default () => (
               alt=""
               src={getMethodPreviewImage(recipe.method.toLowerCase())}
             />
-            <CardGrid.Card.Body>
-              <p>{recipe.source}</p>
-              <h2>{getMethodName(recipe.method)}</h2>
-              <p>
-                {recipe.coffee} : {recipe.water}
-              </p>
-              {recipe.vimeo && <Video />}
-              {recipe.url && <LinkIcon />}
-              {recipe.text && <AlignLeft />}
+            <CardGrid.Card.Body
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                height: "calc(100% - 10rem)",
+                boxSizing: "border-box"
+              }}
+            >
+              <span>{recipe.source}</span>
+              <Heading>{getMethodName(recipe.method)}</Heading>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  marginTop: "auto"
+                }}
+              >
+                <span>
+                  {recipe.coffee} : {recipe.water}
+                </span>
+                {(recipe.vimeo || recipe.youtube) && <Video />}
+              </div>
             </CardGrid.Card.Body>
           </CardGrid.Card>
         </Link>

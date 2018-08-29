@@ -13,8 +13,12 @@ const Card = styled(Paper)`
   border-radius: 0.2rem;
   overflow: hidden;
   flex-basis: 300px;
+  min-width: 0;
+  flex-grow: 0;
+  flex-shrink: 1;
+  height: 100%;
   background: white;
-  margin: 1.5rem;
+  ${"" /* margin: 1.5rem; */}
   cursor: pointer;
 
   box-sizing: border-box;

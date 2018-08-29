@@ -27,7 +27,8 @@ export default ({ active, title, children, showTeaser = false }) => (
     <div
       style={{
         background: "white",
-        padding: "2rem 1rem 1.5rem 1rem"
+        padding: "2rem 1rem 1.5rem 1rem",
+        backgroundImage: "url(/static/pattern2.svg)"
       }}
     >
       <Layout>
@@ -39,7 +40,6 @@ export default ({ active, title, children, showTeaser = false }) => (
         )}
       </Layout>
     </div>
-    {/* <Menu active={active} /> */}
 
     <div>
       <Layout style={{ paddingBottom: "2rem" }}>{children}</Layout>
