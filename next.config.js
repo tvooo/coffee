@@ -1,6 +1,6 @@
 const slug = require("slug");
-const recipes = require("./data/recipes");
-
+// const recipes = require("./data/recipes");
+const recipes = [];
 module.exports = {
   exportPathMap: function() {
     const recipePathMap = {};
