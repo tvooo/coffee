@@ -13,7 +13,7 @@ import H from "../components/H";
 import Button from "../components/Button";
 import Menu from "../components/Menu";
 
-import recipes from "../data/recipes.json";
+import recipes from "../data/recipes";
 import typography from "../design/type.json";
 
 import remark from "remark";
