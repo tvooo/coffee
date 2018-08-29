@@ -33,7 +33,7 @@ export default [
     method: "aeropress",
     coffee: "16g",
     water: "200ml",
-    url: "https://www.lacabra.dk/collections/brew/products/aeropress",
+    url: "https://www.lacabra.dk/collections/brew/products/aeropress#brewguide",
     text:
       "1. Place your aeropress upside down, preheat with hot water. Put the filter cap and paper filter on your pitcher rinse with hot water.\n\n2. Grind your coffee to a slightly coarser than a filter setting.\n\n3. Empty the AeroPress and add the coffee.\n\n4. Tare your scale, start you timer and add the hot water to the coffee, stir two times.\n\n5. Put the filter cap on, flip the aeropress and place on the pitcher.\n\n6. You should be at 40 seconds now. Plunge for 30 seconds."
   },
@@ -43,9 +43,18 @@ export default [
     method: "v60",
     coffee: "16g",
     water: "260ml",
-    url: "https://www.lacabra.dk/collections/brew/products/aeropress",
+    url: "https://www.lacabra.dk/products/hario-v60-dripper-olive-wood",
+
     text:
       "1. Put your V60 on the pitcher. Give the paper filter a good rinse with hot water. It removes all paper taste and preheats the equipment. Remove the rinsing water.\n2. Weigh out 16 grams of coffee and grind on a slightly fine filter grind. Distribute the coffee evenly into the dripper, tare your scale and start the timer.\n3. Begin with a gently pour in the centre of the coffee bed. Allow the water to spread out and gently follow it out to the edges. Ensure the coffee bed is evenly wet. This ‘bloom’ should be achieved in 30 seconds for 60 grams of water.\n4. At 30 seconds begin to pour again, starting with slightly more velocity to ensure all the coffee bed is immersed in water quickly. Pour out in circles to the edges to achieve this before gently returning to the centre of the coffee. Remain pouring gently and slowly in the centre as close to the coffee bed as possible. You should reach 200 grams of water in 1 minute of brew time.\n\nContinue with a slow and steady pour in the centre of the coffee bed. Reaching 260 grams of brewing water in a 1.40 of brew time. The brew should be complete and stop running through shortly before 2 minutes and the final brew should yield 225 grams."
+  },
+  {
+    source: "La Cabra",
+    origin: "Aarhus, Denmark",
+    method: "chemex",
+    coffee: "15g",
+    water: "200ml",
+    url: "https://www.lacabra.dk/collections/brew/products/chemex#brewguide"
   },
   {
     source: "Kurasu",

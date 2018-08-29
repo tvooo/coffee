@@ -1,6 +1,6 @@
 const methodDisplayNames = {
-  coldbrew: "Cold Brew (MIZUDASHI)",
-  v60: "V60",
+  coldbrew: "Mizudashi Cold Brew",
+  v60: "Hario V60",
   kalita: "Kalita Wave",
   chemex: "Chemex",
   aeropress: "Aeropress"
