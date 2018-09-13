@@ -115,5 +115,13 @@ export default [
       "https://www.blackbirdcoffee.de/infos/tipps-und-infos/cold-brew-hario-bottle-in-flasche/",
     text:
       "1. Grind your coffee slightly coarser than for a French Press brew.\n2. Put the coffee into the filter.\n3. Fill in cold water into to bottle.\n4. Put into fridge for about 8 hours.\n5. Try your cold brew neat or on ice."
+  },
+  {
+    method: "aeropress",
+    coffee: "15g",
+    water: "230g",
+    origin: "Ireland",
+    source: "3fe Coffee",
+    url: "https://3fe.com/brew-guides/aeropress"
   }
 ];
