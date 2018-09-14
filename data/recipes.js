@@ -120,8 +120,16 @@ export default [
     method: "aeropress",
     coffee: "15g",
     water: "230g",
-    origin: "Ireland",
+    origin: "Dublin, Ireland",
     source: "3fe Coffee",
     url: "https://3fe.com/brew-guides/aeropress"
+  },
+  {
+    method: "chemex",
+    coffee: "42g",
+    water: "700g",
+    origin: "Portland, OR, USA",
+    source: "Stumptown Coffee Roasters",
+    url: "http://www.stumptowncoffee.com/brew-guides/chemex"
   }
 ];
