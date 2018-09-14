@@ -131,5 +131,21 @@ export default [
     origin: "Portland, OR, USA",
     source: "Stumptown Coffee Roasters",
     url: "http://www.stumptowncoffee.com/brew-guides/chemex"
+  },
+  {
+    method: "chemex",
+    coffee: "30g",
+    water: "500g",
+    origin: "Dublin, Ireland",
+    source: "3fe Coffee",
+    url: "https://3fe.com/brew-guides/chemex"
+  },
+  {
+    method: "v60",
+    coffee: "15g",
+    water: "250g",
+    origin: "Dublin, Ireland",
+    source: "3fe Coffee",
+    url: "https://3fe.com/brew-guides/v60-02-model"
   }
 ];
