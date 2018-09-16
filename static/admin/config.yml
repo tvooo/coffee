@@ -13,13 +13,13 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Source", name: "source", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Source logo", name: "thumbnail", widget: "image"}
+      - {label: "Source logo", name: "thumbnail", widget: "image", required: false}
       - {label: "Method", name: "method", widget: "string"}
-      - {label: "Location", name: "location", widget: "string"}
-      - {label: "URL", name: "url", widget: "string"}
-      - {label: "Water (mg)", name: "method", widget: "number"}
-      - {label: "Coffee (mg)", name: "method", widget: "number"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Location", name: "location", widget: "string", required: false}
+      - {label: "URL", name: "url", widget: "string", required: false}
+      - {label: "Water (mg)", name: "water", widget: "number"}
+      - {label: "Coffee (mg)", name: "coffee", widget: "number"}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
 
 publish_mode: editorial_workflow
 media_folder: "static/images/"
