@@ -18,6 +18,7 @@ module.exports = {
       {},
       {
         "/": { page: "/" },
+        //        "/admin": { page: "/admin" },
         // "/equipment": { page: "/equipment" },
         "/recipes": { page: "/recipes" }
       },
