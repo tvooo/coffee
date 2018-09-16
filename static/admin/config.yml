@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: tvooo/coffee
   branch: master # Branch to update (optional; defaults to master)
 
 collections:
