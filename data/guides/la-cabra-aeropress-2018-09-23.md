@@ -1,5 +1,5 @@
 ---
-title: La cabra Aeropress
+title: La Cabra Aeropress
 source: La Cabra
 date: 2018-09-23T19:59:10.794Z
 method: aeropress
