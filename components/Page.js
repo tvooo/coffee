@@ -9,7 +9,7 @@ import TextLink from "../components/Link";
 import Footer from "../components/Footer";
 
 export default ({ active, title, children, showTeaser = false }) => (
-  <div
+  <main
     style={{
       display: "flex",
       flexDirection: "column",
@@ -35,7 +35,9 @@ export default ({ active, title, children, showTeaser = false }) => (
         <Header />
         {showTeaser && (
           <H>
-            A collection of coffee brewing recipes<br />from all over the world
+            A collection of coffee brewing recipes
+            <br />
+            from all over the world
           </H>
         )}
       </Layout>
@@ -51,9 +53,10 @@ export default ({ active, title, children, showTeaser = false }) => (
           &copy; 2018 Tim von Oldenburg. Images from{" "}
           <Link href="https://unsplash.com/collections/2206352/coffee">
             <a>Unsplash</a>
-          </Link>.
+          </Link>
+          .
         </small>
       </Layout>
     </Footer>
-  </div>
+  </main>
 );

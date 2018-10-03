@@ -3,6 +3,9 @@ import { Video, Link as LinkIcon, AlignLeft } from "react-feather";
 import slug from "slug";
 import styled from "styled-components";
 import Page from "../components/Page";
+import Filter from "../components/Filter";
+import { uniq } from "lodash";
+import { withState, compose } from "recompose";
 
 import CardGrid from "../components/CardGrid";
 
@@ -24,20 +27,55 @@ const Heading = styled.h2`
   margin: 0 0 1em 0;
 `;
 
-{
-  /* <Link
-  href={`/recipedetail?recipe=${i}`}
-  as={`/r/${slug(`${recipe.method}-${recipe.source}-${i}`, {
-    lower: true
-  })}`}
-  key={slug(`${recipe.method}-${recipe.source}-${i}`)}
-> */
-}
+const methods = uniq(recipes.map(r => r.method).sort()).reduce(
+  (prev, curr) => ({ ...prev, [curr]: getMethodName(curr) }),
+  { all: "All" }
+);
 
-export default () => (
+const filterByMethod = (recipes, method) => {
+  if (method === "all") {
+    return recipes;
+  }
+  return recipes.filter(recipe => recipe.method === method);
+};
+
+const sortByThing = (recipes, sort) => {
+  if (sort === "latest") {
+    return recipes;
+  }
+  return recipes.sort((a, b) => a[sort] > b[sort]);
+};
+
+const sortBy = {
+  latest: "Latest",
+  coffee: "Coffee (g)",
+  water: "Water (g)"
+};
+
+console.log(methods);
+
+export default compose(
+  withState("sort", "setSort", "latest"),
+  withState("method", "setMethod", "all")
+)(({ method, setMethod, sort, setSort }) => (
   <Page active="recipes" title="Recipes" showTeaser>
+    <Filter
+      options={methods}
+      selected={method}
+      select={setMethod}
+      title={<h2 style={{ textAlign: "center" }}>Filter by method</h2>}
+      label={option => `Show only ${option} recipes`}
+    />
+    <Filter
+      options={sortBy}
+      selected={sort}
+      select={setSort}
+      title={<h2 style={{ textAlign: "center" }}>Sort</h2>}
+      color={false}
+      label={option => `Sort by ${option}`}
+    />
     <CardGrid>
-      {recipes.map((recipe, i) => (
+      {sortByThing(filterByMethod(recipes, method), sort).map((recipe, i) => (
         <Link
           href={recipe.url}
           key={slug(`${recipe.method}-${recipe.source}-${i}`)}
@@ -76,4 +114,4 @@ export default () => (
       ))}
     </CardGrid>
   </Page>
-);
+));
