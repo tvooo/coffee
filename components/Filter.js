@@ -4,6 +4,7 @@ import colors from "../design/colors.json";
 import fonts from "../design/fonts.json";
 
 const buttonColors = [
+  colors.black,
   colors.cyan[7],
   colors.blue[6],
   colors.indigo[6],
@@ -26,6 +27,7 @@ const InlineList = styled.ul`
 const Button = styled.button.attrs({
   type: "button"
 })`
+  font-size: 1rem;
   font-family: ${fonts.default};
   border: 0.2em solid ${props => props.color};
   color: ${props => props.color};
