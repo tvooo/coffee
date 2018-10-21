@@ -20,7 +20,7 @@
     "react-video": "^1.5.3",
     "react-vimeo": "^2.0.0",
     "recompose": "^0.30.0",
-    "remark": "^9.0.0",
+    "remark": "^10.0.0",
     "remark-react": "^4.0.1",
     "slug": "^0.9.1",
     "styled-components": "^3.4.5"
