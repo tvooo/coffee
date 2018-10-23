@@ -11,22 +11,27 @@
   "author": "Tim von Oldenburg <tim@tvooo.de>",
   "license": "MIT",
   "dependencies": {
+    "@mdx-js/loader": "^0.15.5",
+    "@mdx-js/mdx": "^0.15.5",
+    "@zeit/next-mdx": "^1.2.0",
+    "babel-plugin-styled-components": "^1.8.0",
+    "kaffebar": "^1.2.1",
     "netlify-cms": "^2.1.1",
-    "next": "^6.1.1",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-feather": "^1.1.1",
+    "next": "^7.0.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-feather": "^1.1.4",
     "react-player": "^1.6.4",
     "react-video": "^1.5.3",
     "react-vimeo": "^2.0.0",
     "recompose": "^0.30.0",
     "remark": "^9.0.0",
-    "remark-react": "^4.0.1",
+    "remark-react": "^4.0.3",
     "slug": "^0.9.1",
-    "styled-components": "^3.4.5"
+    "styled-components": "^4.0.0"
   },
   "devDependencies": {
-    "babel-plugin-inline-react-svg": "^0.5.4",
-    "prettier": "^1.14.2"
+    "babel-plugin-inline-react-svg": "^1.0.0",
+    "prettier": "^1.14.3"
   }
 }

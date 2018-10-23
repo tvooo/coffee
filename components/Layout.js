@@ -1,8 +1,8 @@
-import styled, { injectGlobal } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import colors from "../design/colors.json";
 import fonts from "../design/fonts.json";
 
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "sweden_sansregular";
     src: url("static/fonts/swedensans-webfont.eot");
@@ -15,6 +15,7 @@ injectGlobal`
         format("svg");
     font-weight: normal;
     font-style: normal;
+    font-display: fallback;
   }
 
   @font-face {
@@ -29,6 +30,7 @@ injectGlobal`
         format("svg");
     font-weight: bold;
     font-style: normal;
+    font-display: fallback;
   }
 
   body {
@@ -51,4 +53,9 @@ const Layout = styled.div`
   margin: 0 auto;
 `;
 
-export default Layout;
+export default ({ children, ...props }) => (
+  <Layout {...props}>
+    {/* <GlobalStyle /> */}
+    {children}
+  </Layout>
+);

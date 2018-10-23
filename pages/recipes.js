@@ -7,6 +7,8 @@ import Filter from "../components/Filter";
 import { uniq } from "lodash";
 import { withState, compose } from "recompose";
 
+// $ make coffee
+
 import CardGrid from "../components/CardGrid";
 
 import recipes from "../data/recipes";
@@ -51,8 +53,6 @@ const sortBy = {
   coffee: "Coffee (g)",
   water: "Water (g)"
 };
-
-console.log(methods);
 
 export default compose(
   withState("sort", "setSort", "latest"),

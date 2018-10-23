@@ -61,7 +61,7 @@ const Filter = ({ options, selected, select, title, label, color = true }) => (
     {title && title}
     <InlineList>
       {Object.keys(options).map((option, i) => (
-        <li>
+        <li key={option}>
           <ToggleButton
             color={color ? buttonColors[i] : colors.black}
             pressed={selected === option}

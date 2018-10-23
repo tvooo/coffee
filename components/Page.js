@@ -4,9 +4,10 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import Menu from "../components/Menu";
 import Header from "../components/Header";
-import H from "../components/H";
-import TextLink from "../components/Link";
+import { Text, Link as TextLink } from "kaffebar";
+// import TextLink from "../components/Link";
 import Footer from "../components/Footer";
+import Logo, { SmallLogo } from "../components/Logo";
 
 export default ({ active, title, children, showTeaser = false }) => (
   <main
@@ -24,21 +25,31 @@ export default ({ active, title, children, showTeaser = false }) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <base href="/" />
     </Head>
+    <div style={{ padding: "2rem 1rem 1.5rem 1rem" }}>
+      <Layout>
+        <nav style={{ display: "flex", alignItems: "center" }}>
+          <SmallLogo />
+          <Link href="/guide">Beginner's Guide</Link> -{" "}
+          <Link href="/">Recipes</Link> -{" "}
+          <Link href="/equipment">Equipment</Link>
+        </nav>
+      </Layout>
+    </div>
     <div
       style={{
         background: "white",
-        padding: "2rem 1rem 1.5rem 1rem",
-        backgroundImage: "url(/static/pattern2.svg)"
+        padding: "2rem 1rem 1.5rem 1rem"
+        // backgroundImage: "url(/static/pattern2.svg)"
       }}
     >
       <Layout>
         <Header />
         {showTeaser && (
-          <H>
+          <Text as="h1">
             A collection of coffee brewing recipes
             <br />
             from all over the world
-          </H>
+          </Text>
         )}
       </Layout>
     </div>

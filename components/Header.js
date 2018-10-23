@@ -1,5 +1,5 @@
 import Link from "next/link";
-import H from "./H";
+
 import Logo, { SmallLogo } from "./Logo";
 
 export default () => (

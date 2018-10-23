@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import React from "react";
 import typography from "../design/type.json";
 import colors from "../design/colors.json";
 import LogoSvg from "../svgs/logo.svg";
@@ -12,7 +12,7 @@ const LogoType = styled.h2`
   border-bottom: 3px solid transparent;
   margin: 0 0 0 0.5em;
   padding: 0;
-  padding-top: 1rem;
+  ${"" /* padding-top: 1rem; */};
 `;
 
 const LogoContainer = styled.div`
