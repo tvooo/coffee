@@ -48,6 +48,7 @@ const pageQuery = graphql`
             Coffee
             Water
             URL
+            Video
             Brewer {
               data {
                 Name
@@ -78,7 +79,13 @@ export default compose(
       const recipes2 = data.allAirtable.edges
         .filter(a => a.node.data.Name !== ' - ')
         .map(({ node: recipe }) => {
-          const { Coffee: coffee, Name: name, Water: water } = recipe.data
+          const {
+            Coffee: coffee,
+            Name: name,
+            Water: water,
+            URL: url,
+            Video: isVideo,
+          } = recipe.data
           return {
             name,
             coffee,
@@ -90,7 +97,8 @@ export default compose(
             brewer: recipe.data.Brewer[0].data.Name,
             // method: 'v60',
             imageCode: recipe.data.Brewer[0].data.ImageCode,
-            url: recipe.data.URL,
+            url,
+            isVideo,
           }
         })
       const methods = uniq(recipes2.map(r => r.brewer).sort()).reduce(
@@ -158,7 +166,9 @@ export default compose(
                             {recipe.coffee}g : {recipe.water}
                             ml
                           </span>
-                          {(recipe.vimeo || recipe.youtube) && <Video />}
+                          {recipe.isVideo && (
+                            <Video aria-label="This is a video recipe" />
+                          )}
                         </Text>
                       </Card.Body>
                     </Card>

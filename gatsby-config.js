@@ -48,18 +48,8 @@ module.exports = {
             tableName: `Sources`,
             tableView: `Grid view`,
           },
-          // {
-          //   baseId: `YOUR_AIRTABLE_BASE_ID`,
-          //   tableName: `YOUR_TABLE_NAME`,
-          //   tableView: `YOUR_TABLE_VIEW_NAME`
-          //   // can leave off queryName, mapping or tableLinks if not needed
-          // }
         ],
       },
     },
-    // {
-    //   resolve: 'gatsby-source-airtable',
-    //   options: {},
-    // },
   ],
 }
