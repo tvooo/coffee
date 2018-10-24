@@ -1,6 +1,8 @@
-.DS_Store
+# Project dependencies
+.cache
 node_modules
-.next
 yarn-error.log
-out
-.next
+
+# Build directory
+/public
+.DS_Store
