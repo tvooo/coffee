@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@mdx-js/mdx": "^0.15.5",
+    "@mdx-js/mdx": "^0.16.0",
     "@mdx-js/tag": "^0.15.0",
     "gatsby": "^2.0.19",
     "gatsby-mdx": "^0.2.0",
