@@ -50,8 +50,10 @@ const Page = ({ children, showTeaser = false }) => (
 
     <Footer style={{ marginTop: 'auto' }}>
       <Block>
-        <Text as="small">
-          &copy; 2018 Tim von Oldenburg. Images from{' '}
+        <Text>
+          &copy; {new Date().getFullYear()}{' '}
+          <Link href="https://www.tvooo.de">Tim von Oldenburg</Link>. Images
+          from{' '}
           <Link href="https://unsplash.com/collections/2206352/coffee">
             Unsplash
           </Link>

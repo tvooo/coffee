@@ -6,7 +6,7 @@ import Helmet from 'react-helmet';
 import theme from '../theme';
 import GlobalStyles from './GlobalStyles';
 
-import './layout.css';
+// import './layout.css';
 
 const Layout = ({ children }) => (
   <StaticQuery
