@@ -12,10 +12,10 @@ export default {
       type: 'pour-out',
     },
     {
-      type: 'add-coffee'
+      type: 'add-coffee',
     },
     {
-      type: 'start-timer'
+      type: 'start-timer',
     },
   ],
   instructions: [
@@ -43,5 +43,5 @@ export default {
       type: 'add-water',
       amount: 75,
     },
-  ]
-}
+  ],
+};

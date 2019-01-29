@@ -1,7 +1,7 @@
-import { createGlobalStyle } from 'styled-components'
-import colors from '../design/colors.json'
-import fonts from '../design/fonts.json'
-import { withPrefix } from 'gatsby'
+import { createGlobalStyle } from 'styled-components';
+import colors from '../design/colors.json';
+import fonts from '../design/fonts.json';
+import { withPrefix } from 'gatsby';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -53,6 +53,6 @@ const GlobalStyle = createGlobalStyle`
   button {
     font-family: ${fonts.default};
   }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;

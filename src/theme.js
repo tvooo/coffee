@@ -1,4 +1,4 @@
-import colors from './design/colors.json'
+import colors from './design/colors.json';
 
 export default {
   colors: {
@@ -14,4 +14,4 @@ export default {
     serif:
       "sweden_sansregular, Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', Georgia, serif;",
   },
-}
+};

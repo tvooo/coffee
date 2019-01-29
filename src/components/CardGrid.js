@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import Paper from './Paper'
+import React from 'react';
+import styled from 'styled-components';
+import Paper from './Paper';
 
 const Grid = styled.div`
   display: flex;
@@ -8,7 +8,7 @@ const Grid = styled.div`
   align-items: stretch;
   flex-wrap: wrap;
   justify-content: center;
-`
+`;
 
 const Item = styled.div`
   flex-basis: 300px;
@@ -16,7 +16,7 @@ const Item = styled.div`
   flex-grow: 0;
   flex-shrink: 1;
   margin: 1rem;
-`
+`;
 
 //
 // const Card = styled(Paper)`
@@ -63,6 +63,6 @@ const Item = styled.div`
 //
 // CardGrid.Card = Card
 
-Grid.Item = Item
+Grid.Item = Item;
 
-export default Grid
+export default Grid;

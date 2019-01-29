@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 // import Layout from '../components/Layout'
 // import Menu from '../components/Menu'
-import Header from '../components/Header'
-import { Text, Link } from 'kaffebar'
+import Header from '../components/Header';
+import { Text, Link } from 'kaffebar';
 // import TextLink from "../components/Link";
-import Footer from '../components/Footer'
-import { SmallLogo } from '../components/Logo'
-import styled from 'styled-components'
+import Footer from '../components/Footer';
+import { SmallLogo } from '../components/Logo';
+import styled from 'styled-components';
 const Block = styled.div`
   max-width: 1400px;
   margin: 0 auto;
-`
+`;
 
 export default ({ active, title, children, showTeaser = false }) => (
   <main
@@ -73,4 +73,4 @@ export default ({ active, title, children, showTeaser = false }) => (
       </Block>
     </Footer>
   </main>
-)
+);

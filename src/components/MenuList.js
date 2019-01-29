@@ -1,14 +1,14 @@
-import styled from 'styled-components'
-import colors from '../design/colors.json'
+import styled from 'styled-components';
+import colors from '../design/colors.json';
 
-const defaultBg = colors.gray[2]
-const activeBg = colors.gray[0]
+const defaultBg = colors.gray[2];
+const activeBg = colors.gray[0];
 
 const MenuList = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
-`
+`;
 
 const MenuListItem = styled.div`
   background: ${p => (p.active ? activeBg : defaultBg)};
@@ -23,8 +23,8 @@ const MenuListItem = styled.div`
   &:hover {
     background: ${p => (p.active ? activeBg : colors.gray[1])};
   }
-`
+`;
 
-MenuList.Item = MenuListItem
+MenuList.Item = MenuListItem;
 
-export default MenuList
+export default MenuList;

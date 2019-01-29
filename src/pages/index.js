@@ -1,3 +1,3 @@
-import recipes from './recipes'
+import recipes from './recipes';
 
-export default recipes
+export default recipes;

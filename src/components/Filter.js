@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import React from "react";
-import colors from "../design/colors.json";
-import fonts from "../design/fonts.json";
+import styled from 'styled-components';
+import React from 'react';
+import colors from '../design/colors.json';
+import fonts from '../design/fonts.json';
 
 const buttonColors = [
   colors.black,
@@ -9,7 +9,7 @@ const buttonColors = [
   colors.blue[6],
   colors.indigo[6],
   colors.violet[6],
-  colors.fuchsia[6]
+  colors.fuchsia[6],
 ];
 
 const InlineList = styled.ul`
@@ -25,7 +25,7 @@ const InlineList = styled.ul`
 `;
 
 const Button = styled.button.attrs({
-  type: "button"
+  type: 'button',
 })`
   font-size: 1rem;
   font-family: ${fonts.default};
@@ -44,7 +44,7 @@ const Button = styled.button.attrs({
     color: white;
   }
 
-  &[aria-pressed="true"] {
+  &[aria-pressed='true'] {
     background: ${props => props.color};
     color: white;
   }

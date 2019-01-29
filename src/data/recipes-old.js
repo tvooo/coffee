@@ -27,7 +27,7 @@ export default {
         'Gradually fill up to 500g',
         'Bloom: add 50g of water',
         'Bloom: add 50g of water',
-      ]
+      ],
     },
   },
   v60: {
@@ -36,7 +36,8 @@ export default {
     Icon: ChemexIcon,
     method: 'V60',
     vendor: 'Hario',
-    desc: 'A true classic, the Hario V60 is one of the most popular drippers on the market.',
+    desc:
+      'A true classic, the Hario V60 is one of the most popular drippers on the market.',
     recipe: v60,
   },
   aeropress: {
@@ -44,7 +45,8 @@ export default {
     Image: Aeropress,
     Icon: ChemexIcon,
     method: 'Aeropress',
-    desc: 'Bold and unconventional, the Aeropress has quickly gathered a passionate worldwide following.',
+    desc:
+      'Bold and unconventional, the Aeropress has quickly gathered a passionate worldwide following.',
     recipe: test,
   },
 
@@ -54,4 +56,4 @@ export default {
     Icon: ChemexIcon,
     method: 'Wave',
   },
-}
+};

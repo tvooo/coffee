@@ -1,42 +1,42 @@
-import React from 'react'
+import React from 'react';
 // import Link from "next/link";
-import { Video } from 'react-feather'
-import slug from 'slug'
-import styled from 'styled-components'
-import Page from '../components/Page'
-import Filter from '../components/Filter'
-import { uniq } from 'lodash'
-import { withState, compose } from 'recompose'
-import Layout from '../components/Layout'
-import { Link, Card, Text } from 'kaffebar'
-import { withPrefix, StaticQuery, graphql } from 'gatsby'
+import { Video } from 'react-feather';
+import slug from 'slug';
+import styled from 'styled-components';
+import Page from '../components/Page';
+import Filter from '../components/Filter';
+import { uniq } from 'lodash';
+import { withState, compose } from 'recompose';
+import Layout from '../components/Layout';
+import { Link, Card, Text } from 'kaffebar';
+import { withPrefix, StaticQuery, graphql } from 'gatsby';
 
 // $ make coffee
 
-import CardGrid from '../components/CardGrid'
+import CardGrid from '../components/CardGrid';
 
-import recipes from '../data/recipes'
-import { getMethodName, getMethodPreviewImage } from '../utils/methods.js'
+import recipes from '../data/recipes';
+import { getMethodName, getMethodPreviewImage } from '../utils/methods.js';
 
 const filterByMethod = (recipes, method) => {
   if (method === 'all') {
-    return recipes
+    return recipes;
   }
-  return recipes.filter(recipe => recipe.brewer === method)
-}
+  return recipes.filter(recipe => recipe.brewer === method);
+};
 
 const sortByThing = (recipes, sort) => {
   if (sort === 'latest') {
-    return recipes
+    return recipes;
   }
-  return recipes.sort((a, b) => a[sort] > b[sort])
-}
+  return recipes.sort((a, b) => a[sort] > b[sort]);
+};
 
 const sortBy = {
   latest: 'Latest',
   coffee: 'Coffee (g)',
   water: 'Water (g)',
-}
+};
 
 const pageQuery = graphql`
   query AllRecipesQuery {
@@ -66,7 +66,7 @@ const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
 export default compose(
   withState('sort', 'setSort', 'latest'),
@@ -75,7 +75,7 @@ export default compose(
   <StaticQuery
     query={pageQuery}
     render={data => {
-      console.log(data)
+      console.log(data);
       const recipes2 = data.allAirtable.edges
         .filter(a => a.node.data.Name !== ' - ')
         .map(({ node: recipe }) => {
@@ -85,7 +85,7 @@ export default compose(
             Water: water,
             URL: url,
             Video: isVideo,
-          } = recipe.data
+          } = recipe.data;
           return {
             name,
             coffee,
@@ -99,14 +99,14 @@ export default compose(
             imageCode: recipe.data.Brewer[0].data.ImageCode,
             url,
             isVideo,
-          }
-        })
+          };
+        });
       const methods = uniq(recipes2.map(r => r.brewer).sort()).reduce(
         (prev, curr) => ({ ...prev, [curr]: curr }),
         { all: 'All' }
-      )
-      console.log(recipes2)
-      console.log(recipes)
+      );
+      console.log(recipes2);
+      console.log(recipes);
       return (
         <Layout>
           <Page active="recipes" title="Recipes" showTeaser>
@@ -178,7 +178,7 @@ export default compose(
             </CardGrid>
           </Page>
         </Layout>
-      )
+      );
     }}
   />
-))
+));

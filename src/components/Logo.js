@@ -1,13 +1,13 @@
-import styled from 'styled-components'
-import React from 'react'
-import { Text } from 'kaffebar'
-import typography from '../design/type.json'
+import styled from 'styled-components';
+import React from 'react';
+import { Text } from 'kaffebar';
+import typography from '../design/type.json';
 // import colors from '../design/colors.json'
-import LogoSvg from '../svgs/logo.svg'
-import LogoSimpleSvg from '../svgs/logo-simple.svg'
-import { Link } from 'kaffebar'
+import LogoSvg from '../svgs/logo.svg';
+import LogoSimpleSvg from '../svgs/logo-simple.svg';
+import { Link } from 'kaffebar';
 
-import theme from '../theme'
+import theme from '../theme';
 
 const LogoType = styled.h2`
   font-size: ${typography.sizes[1]};
@@ -16,7 +16,7 @@ const LogoType = styled.h2`
   margin: 0 0 0 0.5em;
   padding: 0;
   ${'' /* padding-top: 1rem; */};
-`
+`;
 
 const LogoContainer = styled.div`
   cursor: pointer;
@@ -24,7 +24,7 @@ const LogoContainer = styled.div`
 
   flex-direction: column;
   align-items: center;
-`
+`;
 
 export const SmallLogo = () => (
   <Link href="/" style={{ border: 0 }}>
@@ -35,7 +35,7 @@ export const SmallLogo = () => (
       </Text>
     </div>
   </Link>
-)
+);
 
 export default () => (
   <Link href="/">
@@ -44,4 +44,4 @@ export default () => (
       <Text as="h2">prototyping.coffee</Text>
     </LogoContainer>
   </Link>
-)
+);
