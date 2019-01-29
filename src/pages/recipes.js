@@ -1,22 +1,17 @@
 import React from 'react';
-// import Link from "next/link";
 import { Video } from 'react-feather';
 import slug from 'slug';
-import styled from 'styled-components';
-import Page from '../components/Page';
-import Filter from '../components/Filter';
 import { uniq } from 'lodash';
 import { withState, compose } from 'recompose';
+import { Card, Text } from 'kaffebar';
+import { StaticQuery, graphql } from 'gatsby';
+
 import Layout from '../components/Layout';
-import { Link, Card, Text } from 'kaffebar';
-import { withPrefix, StaticQuery, graphql } from 'gatsby';
-
-// $ make coffee
-
+import Page from '../components/Page';
+import Filter from '../components/Filter';
 import CardGrid from '../components/CardGrid';
 
-import recipes from '../data/recipes';
-import { getMethodName, getMethodPreviewImage } from '../utils/methods.js';
+import getMethodPreviewImage from '../utils/getMethodPreviewImage';
 
 const filterByMethod = (recipes, method) => {
   if (method === 'all') {
@@ -75,7 +70,6 @@ export default compose(
   <StaticQuery
     query={pageQuery}
     render={data => {
-      console.log(data);
       const recipes2 = data.allAirtable.edges
         .filter(a => a.node.data.Name !== ' - ')
         .map(({ node: recipe }) => {
@@ -95,7 +89,6 @@ export default compose(
               place: recipe.data.Source[0].data.Place,
             },
             brewer: recipe.data.Brewer[0].data.Name,
-            // method: 'v60',
             imageCode: recipe.data.Brewer[0].data.ImageCode,
             url,
             isVideo,
@@ -105,8 +98,6 @@ export default compose(
         (prev, curr) => ({ ...prev, [curr]: curr }),
         { all: 'All' }
       );
-      console.log(recipes2);
-      console.log(recipes);
       return (
         <Layout>
           <Page active="recipes" title="Recipes" showTeaser>
@@ -163,7 +154,7 @@ export default compose(
                           }}
                         >
                           <span>
-                            {recipe.coffee}g : {recipe.water}
+                            {recipe.coffee}g :{recipe.water}
                             ml
                           </span>
                           {recipe.isVideo && (

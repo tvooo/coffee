@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
+import { withPrefix } from 'gatsby';
 import colors from '../design/colors.json';
 import fonts from '../design/fonts.json';
-import { withPrefix } from 'gatsby';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {

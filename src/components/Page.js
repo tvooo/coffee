@@ -1,18 +1,16 @@
 import React from 'react';
-// import Layout from '../components/Layout'
-// import Menu from '../components/Menu'
-import Header from '../components/Header';
+import T from 'prop-types';
 import { Text, Link } from 'kaffebar';
-// import TextLink from "../components/Link";
-import Footer from '../components/Footer';
-import { SmallLogo } from '../components/Logo';
 import styled from 'styled-components';
+import Header from './Header';
+import Footer from './Footer';
+
 const Block = styled.div`
   max-width: 1400px;
   margin: 0 auto;
 `;
 
-export default ({ active, title, children, showTeaser = false }) => (
+const Page = ({ children, showTeaser = false }) => (
   <main
     style={{
       display: 'flex',
@@ -22,21 +20,10 @@ export default ({ active, title, children, showTeaser = false }) => (
       minHeight: '100vh',
     }}
   >
-    {/* <div style={{ padding: '2rem 1rem 1.5rem 1rem' }}>
-      <Block>
-        <nav style={{ display: 'flex', alignItems: 'center' }}>
-          <SmallLogo />
-          <Link href="/guide">Beginner's Guide</Link> -{' '}
-          <Link href="/">Recipes</Link> -{' '}
-          <Link href="/equipment">Equipment</Link>
-        </nav>
-      </Block>
-    </div> */}
     <div
       style={{
         background: 'white',
         padding: '2rem 1rem 1.5rem 1rem',
-        // backgroundImage: "url(/static/pattern2.svg)"
       }}
     >
       <Block>
@@ -74,3 +61,10 @@ export default ({ active, title, children, showTeaser = false }) => (
     </Footer>
   </main>
 );
+
+Page.propTypes = {
+  children: T.node,
+  showTeaser: T.bool,
+};
+
+export default Page;

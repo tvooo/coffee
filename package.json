@@ -16,6 +16,8 @@
     "gatsby-source-airtable": "^2.0.2",
     "gatsby-source-filesystem": "^2.0.5",
     "kaffebar": "^1.3.0",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.6.2",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-feather": "^1.1.4",
@@ -32,9 +34,17 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
-    "test": "exit 0"
+    "test": "exit 0",
+    "lint": "eslint '**/*.js'"
   },
   "devDependencies": {
+    "eslint": "5.12.1",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "4.0.0",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-jsx-a11y": "6.2.0",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-react": "7.12.4",
     "prettier": "^1.14.2"
   },
   "repository": {

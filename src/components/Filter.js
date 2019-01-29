@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
+import T from 'prop-types';
+
 import colors from '../design/colors.json';
 import fonts from '../design/fonts.json';
 
@@ -56,6 +58,12 @@ const ToggleButton = ({ pressed, children, label, ...rest }) => (
   </Button>
 );
 
+ToggleButton.propTypes = {
+  children: T.node,
+  pressed: T.bool,
+  label: T.func,
+};
+
 const Filter = ({ options, selected, select, title, label, color = true }) => (
   <div>
     {title && title}
@@ -75,5 +83,14 @@ const Filter = ({ options, selected, select, title, label, color = true }) => (
     </InlineList>
   </div>
 );
+
+Filter.propTypes = {
+  options: T.arrayOf(T.string),
+  selected: T.string,
+  select: T.func,
+  title: T.string,
+  label: T.string,
+  color: T.bool,
+};
 
 export default Filter;
