@@ -23,7 +23,7 @@
     "react-feather": "^1.1.4",
     "react-helmet": "^5.2.0",
     "recompose": "^0.30.0",
-    "slug": "^0.9.1",
+    "slug": "^1.0.0",
     "styled-components": "^4.0.2"
   },
   "keywords": [
