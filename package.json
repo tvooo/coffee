@@ -24,7 +24,7 @@
     "react-helmet": "^5.2.0",
     "recompose": "^0.30.0",
     "slug": "^0.9.1",
-    "styled-components": "^4.0.2"
+    "styled-components": "^5.0.1"
   },
   "keywords": [
     "gatsby"
