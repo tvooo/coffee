@@ -23,7 +23,7 @@ module.exports = {
         // Add any options here
       },
     },
-    `gatsby-mdx`,
+    `gatsby-plugin-mdx`,
     'gatsby-plugin-react-svg',
     {
       resolve: `gatsby-source-airtable`,
@@ -49,6 +49,13 @@ module.exports = {
             tableView: `Grid view`,
           },
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-fathom',
+      options: {
+        siteId: 'OTTPMIWJ',
+        whitelistHostnames: ['prototyping.coffee', 'www.prototyping.coffee'],
       },
     },
   ],
