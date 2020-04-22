@@ -1,9 +1,10 @@
 import React from 'react';
 import T from 'prop-types';
-import { Text, Link } from 'kaffebar';
+import { Flex, Box, Text } from 'rebass/styled-components';
 import styled from 'styled-components';
-import Header from './Header';
 import Footer from './Footer';
+import Menu from './Menu';
+import Logo from './Logo';
 
 const Block = styled.div`
   max-width: 1400px;
@@ -27,9 +28,19 @@ const Page = ({ children, showTeaser = false }) => (
       }}
     >
       <Block>
-        <Header />
+        <Box mt={4} mb={1}>
+          <Logo />
+        </Box>
+        <Flex justifyContent="space-around">
+          <Menu />
+        </Flex>
         {showTeaser && (
-          <Text as="h1" fontFamily="sans" style={{ textAlign: 'center' }}>
+          <Text
+            as="h1"
+            my={5}
+            fontFamily="heading"
+            style={{ textAlign: 'center' }}
+          >
             A collection of coffee brewing recipes
             <br />
             from all over the{' '}
@@ -48,19 +59,7 @@ const Page = ({ children, showTeaser = false }) => (
       </Block>
     </div>
 
-    <Footer style={{ marginTop: 'auto' }}>
-      <Block>
-        <Text>
-          &copy; {new Date().getFullYear()}{' '}
-          <Link href="https://www.tvooo.de">Tim von Oldenburg</Link>. Images
-          from{' '}
-          <Link href="https://unsplash.com/collections/2206352/coffee">
-            Unsplash
-          </Link>
-          .
-        </Text>
-      </Block>
-    </Footer>
+    <Footer />
   </main>
 );
 

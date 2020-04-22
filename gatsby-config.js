@@ -17,12 +17,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
-    {
-      resolve: `gatsby-plugin-styled-components`,
-      options: {
-        // Add any options here
-      },
-    },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-mdx`,
     'gatsby-plugin-react-svg',
     {

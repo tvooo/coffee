@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import T from 'prop-types';
+import { Text } from 'rebass/styled-components';
 
 import colors from '../design/colors.json';
 import fonts from '../design/fonts.json';
@@ -31,8 +32,8 @@ const Button = styled.button.attrs({
 })`
   font-size: 1rem;
   font-family: ${fonts.default};
-  border: 0.2em solid ${props => props.color};
-  color: ${props => props.color};
+  border: 0.2em solid ${(props) => props.color};
+  color: ${(props) => props.color};
   font-weight: 700;
   border-radius: 0.2rem;
   padding: 0.5rem 1rem;
@@ -42,12 +43,12 @@ const Button = styled.button.attrs({
   background: transparent;
 
   &:hover {
-    background: ${props => props.color};
+    background: ${(props) => props.color};
     color: white;
   }
 
   &[aria-pressed='true'] {
-    background: ${props => props.color};
+    background: ${(props) => props.color};
     color: white;
   }
 `;
@@ -66,7 +67,7 @@ ToggleButton.propTypes = {
 
 const Filter = ({ options, selected, select, title, label, color = true }) => (
   <div>
-    {title && title}
+    {title && <Text fontFamily="heading">{title}</Text>}
     <InlineList>
       {Object.keys(options).map((option, i) => (
         <li key={option}>

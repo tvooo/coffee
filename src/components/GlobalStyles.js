@@ -46,7 +46,6 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     background-color: #f4f4f4;
     background-color: ${colors.gray[0]};
-    font-family: sweden_sansregular, sans-serif;
     color: ${colors.black};
   }
 

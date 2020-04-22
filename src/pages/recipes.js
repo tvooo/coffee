@@ -13,11 +13,13 @@ import CardGrid from '../components/CardGrid';
 
 import getMethodPreviewImage from '../utils/getMethodPreviewImage';
 
+import theme from '../theme';
+
 const filterByMethod = (recipes, method) => {
   if (method === 'all') {
     return recipes;
   }
-  return recipes.filter(recipe => recipe.brewer === method);
+  return recipes.filter((recipe) => recipe.brewer === method);
 };
 
 const sortByThing = (recipes, sort) => {
@@ -69,9 +71,9 @@ export default compose(
 )(({ method, setMethod, sort, setSort }) => (
   <StaticQuery
     query={pageQuery}
-    render={data => {
+    render={(data) => {
       const recipes2 = data.allAirtable.edges
-        .filter(a => a.node.data.Name !== ' - ')
+        .filter((a) => a.node.data.Name !== ' - ')
         .map(({ node: recipe }) => {
           const {
             Coffee: coffee,
@@ -94,7 +96,7 @@ export default compose(
             isVideo,
           };
         });
-      const methods = uniq(recipes2.map(r => r.brewer).sort()).reduce(
+      const methods = uniq(recipes2.map((r) => r.brewer).sort()).reduce(
         (prev, curr) => ({ ...prev, [curr]: curr }),
         { all: 'All' }
       );
@@ -106,7 +108,7 @@ export default compose(
               selected={method}
               select={setMethod}
               title={<h2 style={{ textAlign: 'center' }}>Filter by brewer</h2>}
-              label={option => `Show only ${option} recipes`}
+              label={(option) => `Show only ${option} recipes`}
             />
             <Filter
               options={sortBy}
@@ -114,7 +116,7 @@ export default compose(
               select={setSort}
               title={<h2 style={{ textAlign: 'center' }}>Sort</h2>}
               color={false}
-              label={option => `Sort by ${option}`}
+              label={(option) => `Sort by ${option}`}
             />
             <CardGrid>
               {sortByThing(filterByMethod(recipes2, method), sort).map(
@@ -133,6 +135,7 @@ export default compose(
                         display: 'block',
                         textDecoration: 'none',
                         cursor: 'pointer',
+                        color: theme.colors.text,
                       }}
                       as="a"
                       href={recipe.url}
@@ -143,9 +146,12 @@ export default compose(
                         style={{ margin: 0 }}
                       />
                       <Card.Body>
-                        <Text>{recipe.source.name}</Text>
-                        <Text as="h3">{recipe.brewer}</Text>
+                        <Text fontFamily="heading">{recipe.source.name}</Text>
+                        <Text fontFamily="heading" as="h3">
+                          {recipe.brewer}
+                        </Text>
                         <Text
+                          fontFamily="heading"
                           style={{
                             display: 'flex',
                             justifyContent: 'space-between',
