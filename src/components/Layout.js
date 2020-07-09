@@ -19,7 +19,7 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
         <Helmet
           title={data.site.siteMetadata.title}
@@ -35,6 +35,12 @@ const Layout = ({ children }) => (
         <ThemeProvider theme={theme}>
           <div>{children}</div>
         </ThemeProvider>
+
+        <script
+          data-goatcounter="https://goat.protoandtype.com/count"
+          async
+          src="//goat.protoandtype.com/count.js"
+        ></script>
       </>
     )}
   />
