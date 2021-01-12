@@ -29,18 +29,18 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
+          <script
+            async
+            defer
+            data-domain="prototyping.coffee"
+            src="https://plausible.io/js/plausible.js"
+          />
         </Helmet>
         <GlobalStyles />
 
         <ThemeProvider theme={theme}>
           <div>{children}</div>
         </ThemeProvider>
-
-        <script
-          data-goatcounter="https://goat.protoandtype.com/count"
-          async
-          src="//goat.protoandtype.com/count.js"
-        ></script>
       </>
     )}
   />
