@@ -24,7 +24,7 @@
     "react-helmet": "^5.2.1",
     "rebass": "^4.0.7",
     "recompose": "^0.30.0",
-    "slug": "^2.1.1",
+    "slug": "^4.0.4",
     "styled-components": "^5.0.1"
   },
   "keywords": [
