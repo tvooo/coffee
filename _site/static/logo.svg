@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="104px" viewBox="0 0 64 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="120---iPhone" transform="translate(-28.000000, -2.000000)">
+            <g id="Logo" transform="translate(30.000000, 4.000000)">
+                <polygon id="Triangle" stroke="#000000" stroke-width="4" stroke-linejoin="round" transform="translate(30.000000, 23.000000) scale(1, -1) translate(-30.000000, -23.000000) " points="30 0 60 46 0 46"></polygon>
+                <path d="M30,76 C52,76 52,100 52,100 L8,100 C8,100 8,76 30,76 Z" id="Triangle" stroke="#000000" stroke-width="4" stroke-linejoin="round" transform="translate(30.000000, 88.000000) scale(1, -1) translate(-30.000000, -88.000000) "></path>
+                <path d="M30.1232267,53 L27.2618873,59.21181 C26.566858,60.7206803 27.3026638,62.2904661 28.9079419,62.6994647 C28.9079419,62.6994647 29.703878,62.9510138 30.1232267,62.9510138 C30.5425753,62.9510138 31.0621234,62.7520329 31.0621234,62.7520329 C32.655748,62.3056921 33.4158683,60.7002557 32.7689812,59.187429 L30.1232267,53 Z" id="Path-3" fill="#000000"></path>
+                <path d="M52.2136718,76 L56.1752673,76 C58.2876088,76 60,77.7171444 60,79.8257465 L60,79.8257465 C60,81.9386479 58.2837993,83.651493 56.175731,83.651493 L52,83.651493" id="Path-6" stroke="#000000" stroke-width="4" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>
